@@ -1,0 +1,68 @@
+.page {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0fdf4;
+  padding: 2rem;
+}
+
+.card {
+  width: min(95vw, 720px);
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1px solid #d1fae5;
+  padding: 2.5rem;
+  text-align: center;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+}
+
+.title {
+  font-size: 2.75rem;
+  margin-bottom: 1rem;
+  color: #166534;
+}
+
+.description {
+  margin-bottom: 1.75rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #14532d;
+}
+
+.details {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  color: #065f46;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.details li {
+  margin-bottom: 0.75rem;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.3rem;
+  border-radius: 9999px;
+  background: #16a34a;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.link:hover {
+  background: #15803d;
+}

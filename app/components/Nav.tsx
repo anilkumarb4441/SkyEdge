@@ -3,10 +3,12 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import styles from "./Nav.module.css";
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <nav className={styles.nav}>
@@ -28,13 +30,13 @@ export default function Nav() {
         </button>
 
         <div className={`${styles.links} ${menuOpen ? styles.open : ""}`}>
-          <Link href="/" className={styles.link} onClick={() => setMenuOpen(false)}>
+          <Link href="/" className={`${styles.link} ${pathname === "/" ? styles.active : ""}`} onClick={() => setMenuOpen(false)}>
             Home
           </Link>
-          <Link href="/about" className={styles.link} onClick={() => setMenuOpen(false)}>
+          <Link href="/about" className={`${styles.link} ${pathname === "/about" ? styles.active : ""}`} onClick={() => setMenuOpen(false)}>
             About
           </Link>
-          <Link href="/contacts" className={styles.link} onClick={() => setMenuOpen(false)}>
+          <Link href="/contacts" className={`${styles.link} ${pathname === "/contacts" ? styles.active : ""}`} onClick={() => setMenuOpen(false)}>
             Contacts
           </Link>
         </div>

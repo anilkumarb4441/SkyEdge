@@ -10,6 +10,10 @@ export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 
+  const toggleMenu = () => {
+    setMenuOpen((open) => !open);
+  };
+
   return (
     <nav className={styles.nav}>
       <div className={styles.navInner}>
@@ -21,15 +25,16 @@ export default function Nav() {
           type="button"
           aria-label="Toggle navigation"
           aria-expanded={menuOpen}
+          aria-controls="mobile-navigation"
           className={styles.menuButton}
-          onClick={() => setMenuOpen((open) => !open)}
+          onClick={toggleMenu}
         >
           <span className={styles.bar} />
           <span className={styles.bar} />
           <span className={styles.bar} />
         </button>
 
-        <div className={`${styles.links} ${menuOpen ? styles.open : ""}`}>
+        <div id="mobile-navigation" className={`${styles.links} ${menuOpen ? styles.open : ""}`}>
           <Link href="/" className={`${styles.link} ${pathname === "/" ? styles.active : ""}`} onClick={() => setMenuOpen(false)}>
             Home
           </Link>

@@ -1,12 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./home.module.css";
 import Footer from "@/app/components/Footer/Footer";
 
 export default function HomePage() {
     const scrollToSection = () => {
-        const section = document.getElementById("whatwedo-section");
+        const section = document.getElementById("capabilities-section");
         if (!section) return;
 
         const navbarHeight = 70;
@@ -18,25 +19,18 @@ export default function HomePage() {
         <div>
             <div className={styles.page}>
                 <div className={styles.hero_section_container}>
-                    <h1 className={styles.title}>
-                        Driven by Precision, Powered by Quality
-                    </h1>
-                    <button className={styles.hero_button} onClick={scrollToSection}>
-                        Explore More
-                    </button>
-                    <div className={styles.hero_footer_description}>
-                        <div className={styles.herofooter_content}>
-                            <h2>±5µ</h2>
-                            <p>Precision Tolerance</p>
-                        </div>
-                        <div className={styles.herofooter_content}>
-                            <h2>AS9100D</h2>
-                            <p>Certified</p>
-                        </div>
-                        <div className={styles.herofooter_content}>
-                            <h2>5+</h2>
-                            <p>Number of CNC Machines</p>
-                        </div>
+                    <div className={styles.hero_content}>
+                        <p className={styles.hero_kicker}>PRECISION • QUALITY • TRUST</p>
+                        <h1 className={styles.title}>
+                            Aerospace Precision
+                            <span>Components Manufacturer</span>
+                        </h1>
+                        <p className={styles.hero_description}>
+                            Skyedge Aerospace manufactures high-precision aerospace components, delivering superior quality, reliability and performance for a safer tomorrow.
+                        </p>
+                        <button className={styles.hero_button} onClick={scrollToSection}>
+                            Our Capabilities
+                        </button>
                     </div>
                 </div>
             </div>
@@ -61,18 +55,62 @@ export default function HomePage() {
                     </div>
                 </div>
             </div>
+
+            <div id="capabilities-section" className={styles.capabilities_section_container}>
+                <div className={styles.about_us_block}>
+                    <p className={styles.section_label}>ABOUT US</p>
+                    <h2>Engineering Precision.<br />Powering Aerospace.</h2>
+                    <p>
+                        Skyedge Aerospace is a trusted manufacturer of high-quality precision components for the aerospace industry. We combine advanced technology, skilled expertise and a strong focus on quality to deliver components that meet the strictest industry standards and customer expectations.
+                    </p>
+                    <br></br>
+                    <Link href="/about" className={styles.learn_more_button}>
+                        Learn More
+                    </Link>
+                </div>
+
+                <div className={styles.capabilities_block}>
+                    <p className={styles.section_label}>OUR CAPABILITIES</p>
+                    <ul className={styles.capabilities_list}>
+                        <li>VMC Milling (3/4 Axis)</li>
+                        <li>Precision Milling</li>
+                        <li>Precision Components &amp; Assemblies</li>
+                        <li>Material Expertise (Aluminium, Stainless Steel, Titanium, Inconel, Copper, Plastic, MS, etc.)</li>
+                        <li>In-Process &amp; Final Inspection</li>
+                        <li>Traceability &amp; Documentation</li>
+                    </ul>
+                </div>
+
+                <div className={styles.industries_block}>
+                    <p className={styles.section_label}>INDUSTRIES WE SERVE</p>
+                    <div className={styles.industries_grid}>
+                        <div className={styles.industry_card} style={{ backgroundImage: "linear-gradient(180deg, rgba(15, 30, 49, 0.15), rgba(15, 30, 49, 0.7)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=900&q=80')" }}>
+                            <span>Commercial Aerospace</span>
+                        </div>
+                        <div className={styles.industry_card} style={{ backgroundImage: "linear-gradient(180deg, rgba(15, 30, 49, 0.15), rgba(15, 30, 49, 0.7)), url('https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?auto=format&fit=crop&w=900&q=80')" }}>
+                            <span>Mechanical Components</span>
+                        </div>
+                        <div className={styles.industry_card} style={{ backgroundImage: "linear-gradient(180deg, rgba(15, 30, 49, 0.15), rgba(15, 30, 49, 0.7)), url('https://images.unsplash.com/photo-1553344518-6f9d5d74d5ae?auto=format&fit=crop&w=900&q=80')" }}>
+                            <span>Helicopters</span>
+                        </div>
+                        {/* <div className={styles.industry_card} style={{ backgroundImage: "linear-gradient(180deg, rgba(15, 30, 49, 0.15), rgba(15, 30, 49, 0.7)), url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=900&q=80')" }}>
+                            <span>Space &amp; Satellites</span>
+                        </div> */}
+                    </div>
+                </div>
+            </div>
             <div id="whatwedo-section" className={styles.whatwedo_section_container}>
                 <div className={styles.whatwedo_content}>
                     <h2>What We Do</h2>
                     <p>
-                        At SkyEdge, we specialize in precision CNC machining, delivering high-quality components with tight tolerances. Our state-of-the-art equipment and skilled team ensure that every part meets the highest standards of accuracy and reliability.
+                        At SkyEdge, we specialize in precision VMC milling and machining, delivering high-quality components with tight tolerances. Our state-of-the-art equipment and skilled team ensure that every part meets the highest standards of accuracy and reliability.
                     </p>
                     <p>
-                        Driven by innovation and a passion for excellence, we offer end-to-end manufacturing solutions—from rapid prototyping to full-scale production—tailored to meet the evolving needs of diverse industries. Every component we produce reflects our commitment to quality, reliability, and on-time delivery, helping our customers accelerate performance, reduce production challenges, and achieve lasting success. At SkyEdge, we don't just manufacture parts—we build trust, inspire confidence, and deliver precision that powers progress.
+                        Driven by innovation and a passion for excellence, we offer end-to-end manufacturing solutions—tailored to meet the evolving needs of diverse industries. Every component we produce reflects our commitment to quality, reliability, and on-time delivery, helping our customers accelerate performance, reduce production challenges, and achieve lasting success. At SkyEdge, we don't just manufacture parts—we build trust, inspire confidence, and deliver precision that powers progress.
                     </p>
                 </div>
                 <div className={styles.whatwedo_image}>
-                    <Image src="/images/whatwedo.jpg" alt="What We Do" width={500} height={350} />
+                    <Image src="/images/shopfloorimage.jpeg" alt="What We Do" width={500} height={350} />
                 </div>
             </div>
             <div className={styles.vissionandmission_section_container}>
@@ -84,7 +122,7 @@ export default function HomePage() {
                     <div className={styles.vissionandmission_item}>
                         <h3>Our Vision</h3>
                         <p>
-                            To be a leading provider of precision CNC machining solutions, recognized for our commitment to quality,To be a globally trusted aerospace manufacturing company, delivering precision-engineered components that advance the future of aviation, defense, and space technologies through innovation, uncompromising quality, and engineering excellence. 
+                            To be a leading provider of precision VMC milling and machining solutions, recognized for our commitment to quality, and a globally trusted aerospace manufacturing company, delivering precision-engineered components that advance the future of aviation, defense, and space technologies through innovation, uncompromising quality, and engineering excellence. 
                         </p>
                     </div>
                     <div className={styles.vissionandmission_item}>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-labelledby="title desc">
+  <title id="title">ISO 9001:2015 Certified</title>
+  <desc id="desc">Blue circular certificate badge with a checkmark and ISO text.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0f5aa9"/>
+      <stop offset="100%" stop-color="#0a2d4d"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="88" fill="url(#bg)"/>
+  <circle cx="100" cy="100" r="72" fill="none" stroke="#dfeeff" stroke-width="4" opacity="0.9"/>
+  <path d="M63 104l22 24 48-58" fill="none" stroke="#d9f7ff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="100" y="64" text-anchor="middle" font-size="16" font-weight="700" fill="#eaf7ff" font-family="Arial, Helvetica, sans-serif">ISO</text>
+  <text x="100" y="130" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff" font-family="Arial, Helvetica, sans-serif">9001</text>
+  <text x="100" y="150" text-anchor="middle" font-size="12" letter-spacing="1.5" fill="#dfeeff" font-family="Arial, Helvetica, sans-serif">CERTIFIED</text>
+</svg>

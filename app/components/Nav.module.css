@@ -1,7 +1,7 @@
 .nav {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 1100;
   min-height: 60px;
   height: auto;
   border-bottom: 1px solid #e5e7eb;
@@ -10,16 +10,15 @@
   width: 100%;
   padding: 0 20px;
   background: #fff;
-  z-index: 50;
 }
 
 .navInner {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   margin: 0 auto;
-  /* gap: 12px; */
 }
 
 .logoLink {
@@ -30,6 +29,8 @@
 
 .menuButton {
   display: none;
+  position: relative;
+  z-index: 200;
   flex-direction: column;
   justify-content: space-between;
   width: 28px;
@@ -38,6 +39,7 @@
   border: none;
   padding: 0;
   cursor: pointer;
+  pointer-events: auto;
 }
 
 .bar {
@@ -89,7 +91,7 @@
 
   .links {
     position: absolute;
-    top: 100%;
+    top: calc(100% + 8px);
     left: 0;
     right: 0;
     background: #ffffff;
@@ -105,7 +107,7 @@
     visibility: hidden;
     pointer-events: none;
     transition: max-height 0.25s ease, opacity 0.2s ease, visibility 0.2s ease;
-    z-index: 100;
+    z-index: 150;
   }
 
   .links.open {
